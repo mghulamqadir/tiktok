@@ -1,2 +1,11 @@
 ffmpeg
 yt-dlp
+ffmpeg
+libopenal-data
+python3-mutagen
+libavdevice61
+libopenal1
+python3-pycryptodome
+libjack-jackd2-0
+libsdl2-2.0-0
+python3-websockets
