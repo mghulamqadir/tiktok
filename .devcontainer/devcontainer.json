@@ -1,5 +1,5 @@
 {
-  "name": "Python 3 Media Downloader",
+  "name": "Media Downloader Dev",
   "image": "mcr.microsoft.com/devcontainers/python:1-3.11-bullseye",
 
   "customizations": {
@@ -20,17 +20,22 @@
   "updateContentCommand": "if [ -f packages.txt ]; then sudo apt-get update && sudo apt-get install -y $(cat packages.txt); fi && if [ -f requirements.txt ]; then pip install -r requirements.txt; fi",
 
   "postAttachCommand": {
-    "server": "streamlit run main.py --server.enableCORS false --server.enableXsrfProtection false --server.port 8501"
+    "streamlit": "streamlit run main.py --server.enableCORS false --server.enableXsrfProtection false --server.port 8501"
   },
 
   "portsAttributes": {
     "8501": {
-      "label": "Streamlit App",
+      "label": "Streamlit UI",
       "onAutoForward": "openPreview"
+    },
+    "8000": {
+      "label": "FastAPI API",
+      "onAutoForward": "notify"
     }
   },
 
   "forwardPorts": [
-    8501
+    8501,
+    8000
   ]
 }
