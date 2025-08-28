@@ -1,5 +1,4 @@
 ffmpeg
-yt-dlp
 ffmpeg
 libopenal-data
 python3-mutagen
@@ -9,3 +8,4 @@ python3-pycryptodome
 libjack-jackd2-0
 libsdl2-2.0-0
 python3-websockets
+yt-dlp
